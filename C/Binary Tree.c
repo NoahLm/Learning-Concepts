@@ -41,109 +41,109 @@ int main()
 
     switch (user)
         {
-      case 1:
-        printf("Enter value to be inserted: ");
-				scanf(" %d", &value);
+      	case 1:
+      	    printf("Enter value to be inserted: ");
+	    scanf(" %d", &value);
 
-				auxPtr = search(rootPtr, value);
+	    auxPtr = search(rootPtr, value);
 
-				if (auxPtr == NULL)
-					insert(&rootPtr, value);
+	    if (auxPtr == NULL)
+	        insert(&rootPtr, value);
 				
-				else
-					printf("Duplicate data!\n");
+	    else
+	        printf("Duplicate data!\n");
 				
-          break;
+	    break;
 
         case 2:
-				printf("\n The inOrder tree walk is: \n");
+	    printf("\n The inOrder tree walk is: \n");
 
-				inOrder(rootPtr);
-				printf("\n");
+	    inOrder(rootPtr);
+	    printf("\n");
                 
-				break;
+	    break;
 
-			case 3:
-				printf("\n The preOrder tree walk is: \n");
+	case 3:
+	    printf("\n The preOrder tree walk is: \n");
 
-				preOrder(rootPtr);
-				printf("\n");
+	    preOrder(rootPtr);
+	    printf("\n");
 
-				break;
+	    break;
 
-			case 4:
-				printf("\n The postOrder tree walk is: \n");
+	case 4:
+	    printf("\n The postOrder tree walk is: \n");
 
-				postOrder(rootPtr);
-				printf("\n");
+	    postOrder(rootPtr);
+	    printf("\n");
 
-				break;
+	    break;
 
-			case 5:
-                printf("Enter value to be searched: ");
-				scanf(" %d", &value);
+	case 5:
+            printf("Enter value to be searched: ");
+	    scanf(" %d", &value);
 
-				auxPtr = search(rootPtr, value);
+	    auxPtr = search(rootPtr, value);
 
-				if (auxPtr != NULL)
-					printf("-Value: %d\n", auxPtr->data);
+	    if (auxPtr != NULL)
+	    	printf("-Value: %d\n", auxPtr->data);
 				
-				else
-					printf("-Value: NULL\n");
+	    else
+		printf("-Value: NULL\n");
 				
-          break;
+            break;
 
-      case 6:
-				printf("The maximum value is: \n");	
-				auxPtr = max(rootPtr);
+        case 6:
+	    printf("The maximum value is: \n");	
+	    auxPtr = max(rootPtr);
 
-				if(auxPtr != NULL)
-					printf(" %d\n", auxPtr->data);
+	    if(auxPtr != NULL)
+	        printf(" %d\n", auxPtr->data);
 				
-				else
-					printf("Emptry tree!\n");
+	    else
+		printf("Emptry tree!\n");
 				
-				break;
+	    break;
 
-			case 7:
-				printf("The minmum value is: \n");	
-				auxPtr = min(rootPtr);
+	case 7:
+	    printf("The minmum value is: \n");	
+	    auxPtr = min(rootPtr);
 
-				if(auxPtr != NULL)
-					printf(" %d\n", auxPtr->data);
+	    if(auxPtr != NULL)
+	        printf(" %d\n", auxPtr->data);
 				
-				else
-					printf("Emptry tree!\n");
+	    else
+		printf("Emptry tree!\n");
 				
-				break;
+	    break;
             
-      case 8:
-        if (rootPtr == NULL)
-          printf("There is no data!\n");
+        case 8:
+           if (rootPtr == NULL)
+               printf("There is no data!\n");
 
-		else
-          printf("The depth of the tree is: %d\n", depth(rootPtr));
+	   else
+               printf("The depth of the tree is: %d\n", depth(rootPtr));
 
-				break;
+	   break;
       
-      case 9:
-	  	if(rootPtr == NULL)
-			printf("\nThere are no nodes\n");
+        case 9:
+	    if(rootPtr == NULL)
+		printf("\nThere are no nodes\n");
         
 		
-		else
+	    else
 		{
-			printf("Delete a node: ");
+		printf("Delete a node: ");
         	scanf("%d",&value);
 
         	deleteNode(rootPtr, value);
 		}
 
-        break;
+            break;
 
-			default:
-				printf("Invalid choice!\n\n");
-				break;
+	default:
+	    printf("Invalid choice!\n\n");
+	    break;
         }
     }
     return 0;
